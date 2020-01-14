@@ -5,3 +5,4 @@ spring:
     active: jdbc,mybatis,tomcat,eureka
   application:
     name: user-service
+hyg: zyx
