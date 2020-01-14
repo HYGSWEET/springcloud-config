@@ -31,6 +31,6 @@ eureka:
     lease-renewal-interval-in-seconds: 5
 test:
   name:
-    hyg
+    hyg-zyx
 
 
