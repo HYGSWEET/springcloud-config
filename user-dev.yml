@@ -1,0 +1,7 @@
+
+spring:
+  #激活配置
+  profiles:
+    active: jdbc,mybatis,tomcat,eureka
+  application:
+    name: user-service
