@@ -1,8 +1,33 @@
 
 spring:
+  datasource:
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/springcloud
+    username: root
+    password: root
   #激活配置
   profiles:
     active: jdbc,mybatis,tomcat,eureka
   application:
     name: user-service
 hyg: zyx
+#服务器端口
+server:
+  port: ${port:9091}
+#mybatis配置
+mybatis:
+  type-aliases-package: com.itheima.user.pojo
+#eureka注册中心配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+  instance:
+    ip-address: 127.0.0.1 # ip地址
+    prefer-ip-address: true # 更倾向于使用ip，而不是host名
+    #过期时间
+    lease-expiration-duration-in-seconds: 5
+    #续约间隔
+    lease-renewal-interval-in-seconds: 5
+
+
